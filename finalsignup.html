@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SIGN UP</title>
+<link rel="icon" href="icon1.png" type="image">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<script src="custom.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body onload="document.signupform.email.focus()">
+	<div class="header_wrapper">
+		<div class="first_menu">
+				<span class="head_logo"><a href="#"> <img src="review3_logo.png" alt="headerbg" width="100"></a></span>
+				<a href="" alt="SEARCH"><i class="material-icons">favorite</i></a><span id="vr">|</span>
+				<a href="" id="shop" alt="SHOP">BLOG</a>
+		</div>
+		<div class="second_menu">
+			<ul class="head_menu">
+			<a id="usr_signup" href="index.html"><li>HOME</li></a>
+			<a id="usr_signup" href="essays.html"><li>ESSAYS</li></a>
+			<a id="usr_signup" href="aboutus_final.html"><li>ABOUT</li></a>
+			<a id="usr_signup" href="finalsupport.html"><li>SUPPORT</li></a>
+			<a id="usr_signup" href="finalsignup.html"><li style="background-color:#FCEA48; color: black; font-weight: bold;">SIGN UP</li></a>
+		</ul>
+		</div>
+	</div>
+	<div id="banner_wrapper_signup">
+		<h1>Sign up for our Weekly Newsletter</h1>
+		<img src="https://media.giphy.com/media/iFUms1ipn43pGUeN0t/giphy.gif" align="center">
+		<h2>Thank you for your kind interest in e-newsletters from Book Blog.</h2>
+		<form name="signupform" action="#">
+		<input type="text" name="email" placeholder="Enter your email here">
+		<input type="submit" name="submit" onclick="ValidateEmail(document.signupform.email);">
+		</form>
+	</div>
+	<div class="bottom_banner">This is <font face="Bungee Shade">Book Blog</font>,<br>reimagined.</div>
+		<footer>
+		<ul>
+			<li><img class="footer-icons" src="facebook.png"></li>
+			<li><img class="footer-icons" src="twitter.png"></li>
+			<li><img class="footer-icons"src="instagram.png"></li>
+			<li><img class="footer-icons" src="pinterest.png"></li>
+			<li><img class="footer-icons"src="youtube.png"></li>
+		</ul>
+		<ul>
+			<li>DISCLOSURE</li>
+			<li>JOIN US</li>
+			<li>CONTACT</li>
+			<li>PRIVACY POLICY</li>
+			<li>SUPPORT</li>
+		</ul>
+		<p>&copy; Book Blog Media Group</p>
+		
+	</footer>
+	<script type="text/javascript">
+		function ValidateEmail(inputText){
+			var mailformat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+				if(inputText.value.match(mailformat))
+				{
+				alert("Thanks for subscribing!");//The pop up alert for a valid email address
+				document.signupform.email.focus();
+				return true;
+				}
+				else
+				{
+				alert("You have entered an invalid email address!");
+				//The pop up alert for an invalid email address
+				document.signupform.email.focus();
+				return false;
+				}
+		}
+	</script>
+</body>
+</html>
